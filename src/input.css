@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-manrope: Manrope, 'sans-serif';
+  --font-plus-jakarta-sans: Plus Jakarta Sans, 'sans-serif';
+  --color-primary: #0088FF;
+  --color-primary-hover: #006FCC;
+  --color-dark: #1E2938;
+}
+
+.link-underline {
+  position: relative;
+  transition: color 0.1s ease-in-out;
+}
+
+.link-underline::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 4px;
+  top: 100%;
+  left: 0;
+  background-color: #0088FF;
+  transition: 0.4s ease-in-out;
+}
+
+.link-underline:hover::after {
+  width: 100%;
+}
+
+.map-background {
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2;
+    background: linear-gradient(#ffffff,#ffffff88, #ffffff00), url('./assets/image.png');
+}
+
+.input-box {
+    @apply block w-full border border-gray-300 px-4 py-3 text-gray-600 text-sm rounded focus:ring-0 focus:border-primary placeholder-gray-400;
+}

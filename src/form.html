@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="icon" href="assets/logo.png">
+    <title>IDNDrive | Form Penyewaan</title>
+</head>
+<body class="font-plus-jakarta-sans">
+      <nav data-aos="fade-down" class="bg-white z-50 fixed w-full py-7 px-20">
+      <div class="container mx-auto flex justify-between items-center">
+        <a href="#" class="text-dark text-2xl font-bold">IDN<span class="text-blue-500 font-semibold">Drive</span></a>
+        <div class="hidden font-medium md:flex items-center space-x-4">
+            <a href="index.html" class="text-gray-500 hover:text-dark mx-4 link-underline">Beranda</a>
+            <a href="#" class="text-gray-500 hover:text-dark mx-4 link-underline">Mobil</a>
+            <a href="pinjam.html" class="text-gray-500 hover:text-dark mx-4 link-underline">Pinjaman</a>
+            <a href="#" class="text-gray-500 hover:text-dark mx-4 link-underline">Harga</a>
+            <a href="#" class="text-gray-500 hover:text-dark mx-4 link-underline">Ulasan</a>
+            <a href="#Tentang Kami" class="text-gray-500 hover:text-dark mx-4 link-underline">Tentang Kami</a>
+            <a href="#" class="text-gray-500 hover:text-dark mx-4 link-underline">Kontak</a>
+          </div>
+        
+        <div>
+            <a class="text-dark rounded-4xl hover:text-white hover:bg-primary text-[13px] p-2 px-2.5 mx-1 duration-300" href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a class="text-dark rounded-4xl hover:text-white hover:bg-primary text-[13px] p-2 px-2.5 duration-300" href=""><i class="fa-solid fa-bars"></i></a>
+            <a class="text-dark rounded-4xl hover:text-white hover:bg-primary text-[13px] p-2 px-2.5 duration-300" href="/login.html">Log Out</a>
+        </div>
+        
+      </div>
+    </nav>  
+
+    <div class="px-7 py-10">
+    <div class="container pt-5 py-4 flex items-center gap-3 max-w-7xl mx-auto">
+        <p class="text-sm text-gray-600 font-medium">Home / <span class="text-primary">Form Penyewaan Mobil</span></p>
+    </div>
+
+    <div class="container grid grid-cols-12 items-start pb-16 pt-4 gap-6 max-w-7xl mx-auto">
+        
+        <div class="col-span-12 lg:col-span-8 border border-gray-200 p-6 rounded-lg shadow-lg bg-white">
+            <h3 class="text-2xl font-bold capitalize mb-6 text-gray-800">Data Diri Penyewa</h3>
+            
+            <form action="#" method="POST" class="space-y-6">
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="text-gray-600 mb-2 block font-medium">Nama Depan <span class="text-primary">*</span></label>
+                        <input type="text" name="first_name" class="input-box" placeholder="Nama depan" required>
+                    </div>
+                    <div>
+                        <label class="text-gray-600 mb-2 block font-medium">Nama Belakang <span class="text-primary">*</span></label>
+                        <input type="text" name="last_name" class="input-box" placeholder="Nama Belakang" required>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="text-gray-600 mb-2 block font-medium">Nomor Telepon <span class="text-primary">*</span></label>
+                        <input type="tel" name="phone_number" class="input-box" placeholder="Nomor Telepon" required>
+                    </div>
+                    <div>
+                        <label class="text-gray-600 mb-2 block font-medium">Alamat Email <span class="text-primary">*</span></label>
+                        <input type="email" name="email_address" class="input-box" placeholder="Email anda" required>
+                    </div>
+                </div>
+
+                <h4 class="text-xl font-semibold mt-8 mb-4 pt-4 border-t border-gray-200 text-gray-800">Rincian Sewa</h4>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="text-gray-600 mb-2 block font-medium">Lokasi Pengambilang <span class="text-primary">*</span></label>
+                        <input type="text" name="pickup_location" class="input-box" placeholder="Masukkan alamat lengkap" required>
+                    </div>
+                    <div>
+                        <label class="text-gray-600 mb-2 block font-medium">Tanggal Dan Waktu Pengambilan <span class="text-primary">*</span></label>
+                        <input type="datetime-local" name="pickup_datetime" class="input-box" required>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="text-gray-600 mb-2 block font-medium">Durasi Sewa (Hari) <span class="text-primary">*</span></label>
+                        <input type="number" name="rental_duration" class="input-box" placeholder="Contoh: 3" min="1" required>
+                    </div>
+                    <div>
+                        <label class="text-gray-600 mb-2 block font-medium">Pilihan Layanan</label>
+                        <select name="service_option" class="input-box">
+                            <option value="lepas_kunci">Lepas Kunci (Tanpa Sopir)</option>
+                            <option value="dengan_sopir">Dengan Sopir</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div>
+                    <label class="text-gray-600 mb-2 block font-medium">Catatan Tambahan</label>
+                    <textarea name="notes" class="input-box h-24 resize-none" placeholder="Detail penjemputan, preferensi, atau permintaan khusus."></textarea>
+                </div>
+                
+            </form>
+        </div>
+
+        <div class="col-span-12 lg:col-span-4 border border-gray-200 p-6 rounded-lg shadow-lg bg-white sticky top-4">
+            <h4 class="text-gray-800 text-xl mb-4 font-bold border-b pb-3 border-gray-200">Rincian Sewa Mobil</h4>
+            
+            <div class="space-y-3">
+                
+                <div class="flex items-start border-b border-gray-100 pb-3">
+                    <img src="assets/car1.png" alt="Avanza 1.5 G CVT" class="w-20 h-auto rounded mr-4">
+                    <div>
+                        <h5 class="text-gray-800 font-bold">Toyota Avanza 1.5 G CVT</h5>
+                        <p class="text-sm text-gray-600">Harga Dasar: Rp 950.000 / hari</p>
+                        <p class="text-sm text-primary font-semibold">Durasi: 3 Hari</p>
+                    </div>
+                </div>
+                
+                <div class="flex justify-between text-gray-800">
+                    <p>Total Harga Dasar (3 Hari)</p>
+                    <p class="font-medium">Rp 2.850.000</p>
+                </div>
+                <div class="flex justify-between text-gray-800">
+                    <p>Biaya Sopir (Opsional)</p>
+                    <p class="font-medium">+ Rp 0</p>
+                </div>
+                <div class="flex justify-between border-b border-gray-200 text-gray-800 py-3">
+                    <p>Diskon/Promo</p>
+                    <p class="text-red-500 font-medium">- Rp 0</p>
+                </div>
+
+                <div class="flex justify-between text-gray-800 py-3">
+                    <p class="font-bold text-xl">Total Akhir</p>
+                    <p class="font-bold text-xl text-primary">Rp 2.850.000</p>
+                </div>
+            </div>
+            
+            <div class="mb-4 mt-6 flex items-center">
+                <input type="checkbox" id="agreement" class="text-primary focus:ring-0 rounded-sm cursor-pointer w-4 h-4">
+                <label for="agreement" class="text-gray-600 ml-3 cursor-pointer text-sm">Saya menyetujui <a class="text-primary font-medium" href="#">Syarat & Ketentuan</a></label>
+            </div>
+            
+            <a href="pinjam.html" class="w-full mt-5 flex text-center justify-center bg-primary hover:bg-primary-hover text-white py-3 rounded-lg font-medium transition">Sewa Sekarang</a>
+
+        </div>
+
+    </div>
+
+</div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8">
+                
+                <div class="col-span-2 md:col-span-1">
+                    <div class="flex items-center mb-4">
+                        <span class="text-2xl font-bold text-white tracking-wider">IDN<span class="text-blue-500 font-semibold">Drive</span></span>
+                    </div>
+                    <p class="text-sm text-gray-400 mb-4">
+                        Jl. KH. Abdul Hamid, Gn. Sari, <br>
+                        Kec. Pamijahan, Kabupaten Bogor, <br>
+                        Jawa Barat 16810, Indonesia
+                    </p>
+                    <div class="flex space-x-4 text-gray-400">
+                        <a href="#" class="hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="hover:text-white"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-base font-semibold mb-4 text-gray-200">Halaman Utama</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white">Beranda</a></li>
+                        <li><a href="#" class="hover:text-white">Mobil</a></li>
+                        <li><a href="#" class="hover:text-white">Layanan</a></li>
+                        <li><a href="#" class="hover:text-white">Harga</a></li>
+                        <li><a href="#" class="hover:text-white">Ulasan</a></li>
+                        <li><a href="#" class="hover:text-white">Tentang Kami</a></li>
+                        <li><a href="#" class="hover:text-white">Kontak</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-base font-semibold mb-4 text-gray-200">Daftar</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white">Sewa Mobil</a></li>
+                        <li><a href="#" class="hover:text-white">Daftar Mobil Sewaan</a></li>
+                        <li><a href="#" class="hover:text-white">Kisi Mobil Sewaan dengan Peta</a></li>
+                        <li><a href="#" class="hover:text-white">Kisi Mobil Sewaan dengan Tabel</a></li>
+                        <li><a href="#" class="hover:text-white">Daftar Mobil Dealer</a></li>
+                        <li><a href="#" class="hover:text-white">Ulasan Mobil</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-base font-semibold mb-4 text-gray-200" id="Tentang Kami">Tentang Kami</h4>
+                    <div class="text-sm text-gray-400">
+                        <p class="text-justify">
+                            IDNDrive merupakan platform penyewaan mobil asal Indonesia yang dibuat oleh siswa IDN. Kami menghadirkan cara baru untuk menyewa mobil dengan mudah, aman, dan praktis di seluruh Indonesia.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="mt-10 pt-6 border-t border-gray-700">
+                <p class="text-sm text-gray-400">© 2026 All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
