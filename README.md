@@ -16,7 +16,6 @@ An interactive web application designed to deliver a dynamic and engaging user e
 
 * HTML
 * CSS / Tailwind CSS
-* JavaScript
 
 ---
 
